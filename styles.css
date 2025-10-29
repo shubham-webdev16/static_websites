@@ -1,0 +1,70 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    overflow-x: hidden;
+}
+header {
+    text-align: center;
+    padding: 100px 20px;
+    animation: fadeIn 2s ease-in;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+#hero-text {
+    font-size: 3em;
+    animation: type 3s steps(40, end);
+}
+@keyframes type {
+    from { width: 0; }
+    to { width: 100%; }
+}
+.skill {
+    margin: 20px 0;
+}
+.progress-bar {
+    background: #ddd;
+    border-radius: 10px;
+    height: 20px;
+}
+.progress {
+    background: #4caf50;
+    height: 100%;
+    border-radius: 10px;
+    transition: width 1s;
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+.project {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.project:hover {
+    transform: scale(1.05);
+}
+form input, form textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+button {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+    #hero-text { font-size: 2em; }
+}
